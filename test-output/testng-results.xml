@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="10087" started-at="2018-11-20T16:13:35Z" finished-at="2018-11-20T16:13:45Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="10087" started-at="2018-11-20T16:13:35Z" finished-at="2018-11-20T16:13:45Z">
+      <class name="Railway.LoginTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:Railway.LoginTest@d8355a8]" name="beforeClass" is-config="true" duration-ms="7042" started-at="2018-11-20T16:13:35Z" finished-at="2018-11-20T16:13:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@d8355a8]" name="beforeMethod" is-config="true" duration-ms="2437" started-at="2018-11-20T16:13:42Z" finished-at="2018-11-20T16:13:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="TC01()[pri:0, instance:Railway.LoginTest@d8355a8]" name="TC01" duration-ms="41" started-at="2018-11-20T16:13:44Z" description="TC01 - User can log into Railway with valid username and password" finished-at="2018-11-20T16:13:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC01 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@d8355a8]" name="afterMethod" is-config="true" duration-ms="552" started-at="2018-11-20T16:13:44Z" finished-at="2018-11-20T16:13:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- Railway.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
