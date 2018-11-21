@@ -1,7 +1,8 @@
-package Railway;
+package pageObjects;
 
 import org.openqa.selenium.By;
-import Constant.Constant;
+
+import constant.Constant;
 
 public class LoginPage extends GeneralPage {
 
@@ -19,12 +20,22 @@ public class LoginPage extends GeneralPage {
 		Constant.WEBDRIVER.findElement(element).sendKeys(str);
 	}
 	
-	public void login(String username, String password)
+	public void login(String username, String password, int times)
 	{
 		//Submit login credentials
-		enter(username,txtUsername);
-		enter(password, txtPassword);
-		Constant.WEBDRIVER.findElement(btnLogin).click();
+	//	if(username.equals(null))
+		{
+			System.out.println("username is not null");
+			enter(username,txtUsername);
+		}
+	//	if(password.equals(null))
+		{
+			System.out.println("password is not null");
+			enter(password,txtPassword);
+		}
+		for (int i = 0; i < times; i++) {
+			Constant.WEBDRIVER.findElement(btnLogin).click();
+		}	
 	}
 		
 	//need move after writting other TC

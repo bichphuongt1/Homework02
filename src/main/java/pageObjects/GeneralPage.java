@@ -1,11 +1,11 @@
-package Railway;
+package pageObjects;
 
 import javax.swing.text.Element;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import Constant.Constant;
+import constant.Constant;
 
 public class GeneralPage {
 	// Locators
@@ -29,11 +29,11 @@ public class GeneralPage {
 		gotoPage(tabLogin);
 	}
 	
-	public void logout() {
-		Constant.WEBDRIVER.findElement(tabLogout);
+	public void gotoBookTicketPage() {
+		gotoPage(tabBookTicket);
 	}
 	
-	public void gotoLoginPageFromBookTicket() {
-		Constant.WEBDRIVER.findElement(tabBookTicket).click();
+	public void logout() {
+		Constant.WEBDRIVER.findElement(tabLogout).click();
 	}
 }

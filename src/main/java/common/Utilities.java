@@ -1,8 +1,8 @@
-package Common;
+package common;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import Constant.Constant;
+import constant.Constant;
 
 public class Utilities {
 	public static String getProjectPath() {
