@@ -1,5 +1,7 @@
 package pageObjects;
 
+import org.openqa.selenium.By;
+
 import constant.Constant;
 
 public class HomePage extends GeneralPage{
