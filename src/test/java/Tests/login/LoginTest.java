@@ -7,20 +7,15 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import common.Message;
-import common.PageTitle;
 import common.Utilities;
 import constant.Constant;
-import pageObjects.ChangePasswordPage;
-import pageObjects.GeneralPage;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
-import pageObjects.MyTicketPage;
 
-public class LoginTest extends GeneralPage {
+public class LoginTest extends LoginPage {
 
 	public HomePage homePage;
-	public LoginPage loginPage;
+//	public LoginPage loginPage;
 
 	@BeforeClass
 	public void beforeClass() {
@@ -32,8 +27,8 @@ public class LoginTest extends GeneralPage {
 	@BeforeMethod
 	public void beforeMethod() {
 		System.out.println("Pre-conditon");
-		homePage.gotoLoginPage();
-		loginPage = new LoginPage();
+		gotoPage(tabLogin);
+		//loginPage = new LoginPage();
 	}
 
 	@AfterMethod
@@ -48,80 +43,93 @@ public class LoginTest extends GeneralPage {
 	
 	@Test(description = "TC01 - User can log into Railway with valid username and password")
 	public void TC01() {
-		loginPage.login(Constant.USERNAME, Constant.PASSWORD, 1);
-		String actualMsg = loginPage.getWelcomeMessage();
-		String expectedMsg = Message.LOGIN_SUCCESS_MSG;
+		login(Constant.UserInfo.USERNAME, Constant.UserInfo.PASSWORD, 1);
+		String actualMsg = getTextElement(lblWelcomeMessage);
+		String expectedMsg = Constant.Message.LOGIN_SUCCESS_MSG;
 		boolean result = actualMsg.equals(expectedMsg);
 		Assert.assertTrue(result, "Message should be::: " + expectedMsg);
 		if(result) {
-			homePage.logout();
+			logout();
 		}
 	}
 
 	@Test(description = "TC02 - User can't login with blank \\\"Username\\\" textbox")
 	public void TC02() {
-		loginPage.login(Constant.BLANK, Constant.PASSWORD, 1);
-		String actualMsg = loginPage.getErrorMessage();
-		String expectedMsg = Message.LOGIN_ERROR_MSG;
-		Assert.assertEquals(actualMsg, expectedMsg, "Message should be::: " + expectedMsg);
+		login(Constant.UserInfo.BLANK, Constant.UserInfo.PASSWORD, 1);
+		String actualMsg = getTextElement(lblLoginErrorMsg);
+		String expectedMsg = Constant.Message.LOGIN_ERROR_MSG;
+		Assert.assertTrue(actualMsg.equals(expectedMsg), "Message should be::: " + expectedMsg);
 	}
 
 	@Test(description = "TC03 - User cannot log into Railway with invalid password")
 	public void TC03() {			
-		loginPage.login(Constant.USERNAME, Constant.INVALID_PASSWORD, 1);
-		String actualMsg = loginPage.getErrorMessage();
-		String expectedMsg = Message.LOGIN_ERROR_MSG;
-		Assert.assertEquals(actualMsg, expectedMsg, "Message should be::: " + expectedMsg);			
+		login(Constant.UserInfo.USERNAME, Constant.UserInfo.INVALID_PASSWORD, 1);
+		String actualMsg = getTextElement(lblLoginErrorMsg);
+		String expectedMsg = Constant.Message.LOGIN_ERROR_MSG;
+		Assert.assertTrue(actualMsg.equals(expectedMsg), "Message should be::: " + expectedMsg);		
 	}
 	
 	@Test(description = "TC04 - Login page displays when un-logged User clicks on \\\"Book ticket\\\" tab")
 	public void TC04() {
-		homePage.gotoBookTicketPage();
-		String actualMsg = loginPage.getPageTitle();
-		String expectedMsg = PageTitle.loginPageTitle;
-		Assert.assertEquals(actualMsg, expectedMsg, "Message should be::: " + expectedMsg);		
+		gotoPage(tabBookTicket);
+		String actualMsg = getTextElement(lblPageTitle);
+		String expectedMsg = Constant.PageTitle.LOGIN;
+		Assert.assertTrue(actualMsg.equals(expectedMsg), "Message should be::: " + expectedMsg);		
 	}
 	
 	@Test(description = "TC05 - System shows message when user enters wrong password several times")
 	public void TC05() {
-		loginPage.login(Constant.USERNAME, Constant.INVALID_PASSWORD, 4);
-		String actualMsg = loginPage.getErrorMessage();
-		String expectedMsg = Message.LOGIN_LOCKED_ERROR_MSG;
-		Assert.assertEquals(actualMsg, expectedMsg,"Message should be::: " + expectedMsg);		
+		login(Constant.UserInfo.USERNAME, Constant.UserInfo.INVALID_PASSWORD, 4);
+		String actualMsg = getTextElement(lblLoginErrorMsg);
+		String expectedMsg = Constant.Message.LOGIN_LOCKED_ERROR_MSG;
+		Assert.assertTrue(actualMsg.equals(expectedMsg), "Message should be::: " + expectedMsg);		
 	}
 	
-	@Test(description = "Additional pages display once user logged in")
+	@Test(description = "TC06 - Additional pages display once user logged in")
 	public void TC06() {
-		loginPage.login(Constant.USERNAME, Constant.PASSWORD, 1);
-		boolean result = loginPage.getWelcomeMessage().equals(Message.LOGIN_SUCCESS_MSG);
+		login(Constant.UserInfo.USERNAME, Constant.UserInfo.PASSWORD, 1);
+		boolean result = getTextElement(lblWelcomeMessage).equals(Constant.Message.LOGIN_SUCCESS_MSG);
 		if(result) {
 			System.out.println("Login Successfully");
-			boolean isVisibleTabMyTicket = this.isVisibleTab(homePage.tabMyTicket);
-			boolean isVisibleTabChangePassword = this.isVisibleTab(homePage.tabChangePassword);
-			boolean isVisibleTabLogout = this.isVisibleTab(homePage.tabLogout);
 			
 			//verify "My ticket", "Change password" and "Logout" tabs are displayed.
-			Assert.assertTrue(isVisibleTabMyTicket, "My Ticket tab is NOT displayed.");
-			Assert.assertTrue(isVisibleTabChangePassword, "Change Password tab is NOT displayed.");
-			Assert.assertTrue(isVisibleTabLogout, "Log out tab is NOT displayed.");
+			Assert.assertTrue(isElementDisplay(tabMyTicket), "My Ticket tab is NOT displayed.");
+			Assert.assertTrue(isElementDisplay(tabChangePassword), "Change Password tab is NOT displayed.");
+			Assert.assertTrue(isElementDisplay(tabLogout), "Log out tab is NOT displayed.");
 			
 			//verify click "My ticket" tab, user will be directed to My ticket page
-			if(isVisibleTabMyTicket) {
-				gotoMyTicketPage();
-				MyTicketPage myTicket = new MyTicketPage();
-				Assert.assertTrue(myTicket.getPageTitle().equals(PageTitle.myTicketPageTitle));
+			if(isElementDisplay(tabMyTicket)) {
+				gotoPage(tabMyTicket);
+				Assert.assertTrue(getTextElement(lblPageTitle).equals(Constant.PageTitle.MY_TICKET), "Page title should be::: " + Constant.PageTitle.MY_TICKET);
 			} 
 			
 			//verify Click "Change password" tab, user will be directed to Change password page
-			if(isVisibleTabChangePassword) {
-				gotoChangePasswordPage();
-				ChangePasswordPage changePasswordPage = new ChangePasswordPage();
-				Assert.assertTrue(changePasswordPage.getPageTitle().equals(PageTitle.changePasswordPageTitle));
-			}
-			
-			homePage.logout();
+			if(isElementDisplay(tabChangePassword)) {
+				gotoPage(tabChangePassword);
+				Assert.assertTrue(getTextElement(lblPageTitle).equals(Constant.PageTitle.CHANGE_PASSWORD), "Page title should be::: " + Constant.PageTitle.CHANGE_PASSWORD);
+			} 
+			logout();
 		} else {
 			Assert.assertTrue(result, "Login Failed. TC06 is BLOCKED by TC01");
 		}
 	}
+	
+	@Test(description = "TC08 - User can't login with an account hasn't been activated")
+	public void TC08() {
+		System.out.println("Utilities.registeredEmail::: " + Utilities.registeredEmail);
+		login(Utilities.registeredEmail, Constant.UserInfo.PASSWORD, 1);
+		String actualMsg = getTextElement(lblLoginErrorMsg);
+		String expectedMsg = Constant.Message.LOGIN_INVALID_ACCOUNT;
+		Assert.assertTrue(actualMsg.equals(expectedMsg), "Message should be::: " + expectedMsg);		
+	}
+	
+/*	// phuong add TC11
+	@Test(description = "Phuong add ==== TC11 - create an account-> activated -> login")")
+	public void TC11() {
+		FakeEmailPage.element.click();
+		login(FakeEmailPage.email, Constant.UserInfo.PASSWORD, 1);
+		String actualMsg = getTextElement(lblWelcomeMessage);
+		String expectedMsg = Constant.Message.LOGIN_SUCCESS_MSG;
+		Assert.assertTrue(actualMsg.equals(expectedMsg), "Message should be::: " + expectedMsg);		
+	}*/
 }

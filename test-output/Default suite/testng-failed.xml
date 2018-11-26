@@ -6,8 +6,8 @@
       <class name="test.register.RegisterTest">
         <methods>
           <include name="afterMethod"/>
+          <include name="TC10"/>
           <include name="afterClass"/>
-          <include name="TC07"/>
           <include name="beforeMethod"/>
           <include name="beforeClass"/>
         </methods>

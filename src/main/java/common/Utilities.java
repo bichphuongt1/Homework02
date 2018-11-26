@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import constant.Constant;
 
 public class Utilities {
+	
 	public static String getProjectPath() {
 		return System.getProperty("user.dir");
 	}
@@ -14,5 +15,7 @@ public class Utilities {
 		Constant.WEBDRIVER = new ChromeDriver();
 		Constant.WEBDRIVER.manage().window().maximize();		
 	}
+	
+	public static String registeredEmail;
 
 }

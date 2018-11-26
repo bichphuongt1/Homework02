@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13103" started-at="2018-11-22T17:04:17Z" finished-at="2018-11-22T17:04:30Z">
+  <suite name="Default suite" duration-ms="4914" started-at="2018-11-26T16:04:26Z" finished-at="2018-11-26T16:04:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13103" started-at="2018-11-22T17:04:17Z" finished-at="2018-11-22T17:04:30Z">
+    <test name="Default test" duration-ms="4914" started-at="2018-11-26T16:04:26Z" finished-at="2018-11-26T16:04:31Z">
       <class name="test.register.RegisterTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.register.RegisterTest@6a41eaa2]" name="beforeClass" is-config="true" duration-ms="6888" started-at="2018-11-22T17:04:17Z" finished-at="2018-11-22T17:04:24Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.register.RegisterTest@22349ad3]" name="beforeClass" is-config="true" duration-ms="3825" started-at="2018-11-26T16:04:26Z" finished-at="2018-11-26T16:04:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.register.RegisterTest@6a41eaa2]" name="beforeMethod" is-config="true" duration-ms="625" started-at="2018-11-22T17:04:24Z" finished-at="2018-11-22T17:04:25Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.register.RegisterTest@22349ad3]" name="beforeMethod" is-config="true" duration-ms="120" started-at="2018-11-26T16:04:30Z" finished-at="2018-11-26T16:04:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC07()[pri:0, instance:test.register.RegisterTest@6a41eaa2]" name="TC07" duration-ms="4999" started-at="2018-11-22T17:04:25Z" description="User can create new account&#039;" finished-at="2018-11-22T17:04:30Z">
+        <test-method status="PASS" signature="TC10()[pri:0, instance:test.register.RegisterTest@22349ad3]" name="TC10" duration-ms="381" started-at="2018-11-26T16:04:30Z" description="TC10 - User can&#039;t create account with &quot;Confirm password&quot; is not the same with &quot;Password&quot;" finished-at="2018-11-26T16:04:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC07 -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.register.RegisterTest@6a41eaa2]" name="afterClass" is-config="true" duration-ms="563" started-at="2018-11-22T17:04:30Z" finished-at="2018-11-22T17:04:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:test.register.RegisterTest@6a41eaa2]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-11-22T17:04:30Z" finished-at="2018-11-22T17:04:30Z">
+        </test-method> <!-- TC10 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:test.register.RegisterTest@22349ad3]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-11-26T16:04:30Z" finished-at="2018-11-26T16:04:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.register.RegisterTest@22349ad3]" name="afterClass" is-config="true" duration-ms="564" started-at="2018-11-26T16:04:30Z" finished-at="2018-11-26T16:04:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
       </class> <!-- test.register.RegisterTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

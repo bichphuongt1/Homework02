@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Homework02]">
+  <test thread-count="5" name="src/test/java(failed)">
+    <classes>
+      <class name="test.register.RegisterTest">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="TC10"/>
+          <include name="afterClass"/>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- test.register.RegisterTest -->
+      <class name="test.changePassword.ChangePasswordTest">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="TC09"/>
+        </methods>
+      </class> <!-- test.changePassword.ChangePasswordTest -->
+      <class name="Tests.login.LoginTest">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="TC05"/>
+          <include name="TC03"/>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- Tests.login.LoginTest -->
+    </classes>
+  </test> <!-- src/test/java(failed) -->
+</suite> <!-- Failed suite [Homework02] -->

@@ -2,14 +2,13 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 
-import constant.Constant;
-
 public class LoginPage extends GeneralPage {
 
 	//Locators
 	private final By txtUsername = By.id("username");
 	private final By txtPassword = By.id("password");
 	private final By btnLogin = By.xpath("//input[@value='login']");
+	public final By lblLoginErrorMsg = By.xpath("//div[@id='content']/p[@class='message error LoginForm']");
 	
 	//Methods
 
@@ -25,7 +24,7 @@ public class LoginPage extends GeneralPage {
 			this.enterText(password, txtPassword);
 		}
 		for (int i = 0; i < times; i++) {
-			Constant.WEBDRIVER.findElement(btnLogin).click();
+			this.clickElement(btnLogin);
 		}	
 	}
 }
