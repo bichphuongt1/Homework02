@@ -22,8 +22,6 @@ public class RegisterTest extends RegisterPage {
 		Utilities.openChromeBrowser();
 		homePage = new HomePage();
 		homePage.open();
-//		Utilities.openChromeBrowser();
-//		FakeEmailPage.open();
 	}
 	
 	@BeforeMethod

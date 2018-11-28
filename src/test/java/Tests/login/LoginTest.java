@@ -1,5 +1,7 @@
 package Tests.login;
 
+import static org.testng.Assert.assertEquals;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -8,32 +10,27 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import common.Utilities;
-import constant.Constant;
+import constant.Constant;import constant.TabMenu;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 
-public class LoginTest extends LoginPage {
-
-	public HomePage homePage;
-//	public LoginPage loginPage;
-
+public class LoginTest {
+	
+	LoginPage loginPage;
+	HomePage homePage;
+	
 	@BeforeClass
 	public void beforeClass() {
 		Utilities.openChromeBrowser();
 		homePage = new HomePage();
+		loginPage = new LoginPage();
 		homePage.open();
 	}
 
 	@BeforeMethod
 	public void beforeMethod() {
 		System.out.println("Pre-conditon");
-		gotoPage(tabLogin);
-		//loginPage = new LoginPage();
-	}
-
-	@AfterMethod
-	public void afterMethod() {
-		System.out.println("Post-condition");
+		homePage.gotoPage(TabMenu.LOGIN);
 	}
 
 	@AfterClass
@@ -43,22 +40,16 @@ public class LoginTest extends LoginPage {
 	
 	@Test(description = "TC01 - User can log into Railway with valid username and password")
 	public void TC01() {
-		login(Constant.UserInfo.USERNAME, Constant.UserInfo.PASSWORD, 1);
-		String actualMsg = getTextElement(lblWelcomeMessage);
-		String expectedMsg = Constant.Message.LOGIN_SUCCESS_MSG;
-		boolean result = actualMsg.equals(expectedMsg);
-		Assert.assertTrue(result, "Message should be::: " + expectedMsg);
-		if(result) {
-			logout();
-		}
+		loginPage.login(Constant.UserInfo.USERNAME, Constant.UserInfo.PASSWORD, 1);
+		assertEquals(homePage.getWelcomeMessage(), homePage.welcomeMsg);
 	}
 
-	@Test(description = "TC02 - User can't login with blank \\\"Username\\\" textbox")
+/*	@Test(description = "TC02 - User can't login with blank \\\"Username\\\" textbox")
 	public void TC02() {
-		login(Constant.UserInfo.BLANK, Constant.UserInfo.PASSWORD, 1);
+		loginPage.login(Constant.UserInfo.USERNAME, Constant.UserInfo.PASSWORD, 1);
 		String actualMsg = getTextElement(lblLoginErrorMsg);
 		String expectedMsg = Constant.Message.LOGIN_ERROR_MSG;
-		Assert.assertTrue(actualMsg.equals(expectedMsg), "Message should be::: " + expectedMsg);
+		assertEquals(homePage., expected);
 	}
 
 	@Test(description = "TC03 - User cannot log into Railway with invalid password")
@@ -123,7 +114,7 @@ public class LoginTest extends LoginPage {
 		Assert.assertTrue(actualMsg.equals(expectedMsg), "Message should be::: " + expectedMsg);		
 	}
 	
-/*	// phuong add TC11
+	// phuong add TC11
 	@Test(description = "Phuong add ==== TC11 - create an account-> activated -> login")")
 	public void TC11() {
 		FakeEmailPage.element.click();
@@ -131,5 +122,5 @@ public class LoginTest extends LoginPage {
 		String actualMsg = getTextElement(lblWelcomeMessage);
 		String expectedMsg = Constant.Message.LOGIN_SUCCESS_MSG;
 		Assert.assertTrue(actualMsg.equals(expectedMsg), "Message should be::: " + expectedMsg);		
-	}*/
+	} */
 }

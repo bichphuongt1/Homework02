@@ -2,8 +2,10 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import common.ElementHelper;
+import constant.Constant;
+import constant.TabMenu;
 
-public class GeneralPage extends ElementHelper {
+public class GeneralPage{
 	// Locators
 	public final By tabLogin = By.xpath("//span[normalize-space()='Login']");
 	public final By tabLogout = By.xpath("//span[normalize-space()='Log out']");	
@@ -16,14 +18,16 @@ public class GeneralPage extends ElementHelper {
 	public final By lblWelcomeMessage = By.xpath("//div[@class='account']");
 //	public final By lblErrorMsg = By.xpath("//div[@id='content']/p[@class='message error']");
 	
+	public String welcomeMsg = String.format(Constant.Message.LOGIN_WELCOME_MSG + "%s", Constant.UserInfo.USERNAME);
+	
+	public ElementHelper elementHelper = new ElementHelper();
+	
 	//methods
-	public void gotoPage(By locator) {
-		clickElement(locator);
+	public void gotoPage(TabMenu tab) {
+		elementHelper.getTabElement(tab).click();
 	}
 	
-	public void logout() {
-		if(isElementDisplay(tabLogout)) {
-			clickElement(tabLogout);
-		}
+	public String getWelcomeMessage() {
+		return Constant.WEBDRIVER.findElement(lblWelcomeMessage).getText();
 	}
 }

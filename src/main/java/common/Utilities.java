@@ -15,7 +15,5 @@ public class Utilities {
 		Constant.WEBDRIVER = new ChromeDriver();
 		Constant.WEBDRIVER.manage().window().maximize();		
 	}
-	
-	public static String registeredEmail;
 
 }

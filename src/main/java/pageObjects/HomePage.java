@@ -1,7 +1,5 @@
 package pageObjects;
 
-import org.openqa.selenium.By;
-
 import constant.Constant;
 
 public class HomePage extends GeneralPage{
@@ -11,4 +9,5 @@ public class HomePage extends GeneralPage{
 		Constant.WEBDRIVER.navigate().to(Constant.RAILWAY_URL);
 		return this;
 	}
+
 }
