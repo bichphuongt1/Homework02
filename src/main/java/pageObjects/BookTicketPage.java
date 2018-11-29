@@ -14,33 +14,33 @@ public class BookTicketPage extends GeneralPage {
 	public static By ticketAmount = By.name("TicketAmount");
 	public static By btnBookTicket = By.xpath("//input[@value='Book ticket']");
 
-	public void setDepartDate(String departDateName) {
+	public void selectDepartDate(String departDateName) {
 		WebElement element = Constant.WEBDRIVER.findElement(departDate);
-		Select dropdown= new Select(element);
+		Select dropdown = new Select(element);
 		dropdown.selectByVisibleText(departDateName);
 	}
 	
-	public void setDepartStation(String departStationName) {
+	public void selectDepartStation(String departStationName) {
 		WebElement element = Constant.WEBDRIVER.findElement(departStation);
-		Select dropdown= new Select(element);
+		Select dropdown = new Select(element);
 		dropdown.selectByVisibleText(departStationName);
 	}
 	
-	public void setArriveStation(String arriveStationName) {
+	public void selectArriveStation(String arriveStationName) {
 		WebElement element = Constant.WEBDRIVER.findElement(arriveStation);
-		Select dropdown= new Select(element);
+		Select dropdown = new Select(element);
 		dropdown.selectByVisibleText(arriveStationName);
 	}
 	
-	public void setSeatType(String seatTypeName) {
+	public void selectSeatType(String seatTypeName) {
 		WebElement element = Constant.WEBDRIVER.findElement(seatType);
-		Select dropdown= new Select(element);
+		Select dropdown = new Select(element);
 		dropdown.selectByVisibleText(seatTypeName);
 	}
 	
-	public void setTicketAmount(String ticketAmountName) {
+	public void selectTicketAmount(String ticketAmountName) {
 		WebElement element = Constant.WEBDRIVER.findElement(ticketAmount);
-		Select dropdown= new Select(element);
+		Select dropdown = new Select(element);
 		dropdown.selectByVisibleText(ticketAmountName);
 	}
 	

@@ -1,4 +1,4 @@
-package test.Password;
+package Tests.Booking;
 
 import static org.testng.Assert.assertEquals;
 
@@ -11,7 +11,6 @@ import common.Utilities;
 import constant.Constant;
 import constant.TabMenu;
 import pageObjects.BookTicketPage;
-import pageObjects.ChangePasswordPage;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 
@@ -43,11 +42,11 @@ public class BookTicketTest {
 		loginPage.login(Constant.UserInfo.USERNAME, Constant.UserInfo.PASSWORD, 1);
 		homePage.gotoPage(TabMenu.BOOK_TICKET);
 		
-		bookTicketPage.setDepartDate(Constant.BookTicket.DEPART_DATE);
-		bookTicketPage.setDepartStation(Constant.BookTicket.DEPART_STATION);
-		bookTicketPage.setArriveStation(Constant.BookTicket.ARRIVE_STATION);
-		bookTicketPage.setSeatType(Constant.BookTicket.SEAT_TYPE);
-		bookTicketPage.setTicketAmount(Constant.BookTicket.TICKET_AMOUNT);
+		bookTicketPage.selectDepartDate(Constant.BookTicket.DEPART_DATE);
+		bookTicketPage.selectDepartStation(Constant.BookTicket.DEPART_STATION);
+		bookTicketPage.selectArriveStation(Constant.BookTicket.ARRIVE_STATION);
+		bookTicketPage.selectSeatType(Constant.BookTicket.SEAT_TYPE);
+		bookTicketPage.selectTicketAmount(Constant.BookTicket.TICKET_AMOUNT);
 		bookTicketPage.bookTicket();
 		
 		assertEquals(bookTicketPage.getBookTicketSuccessMessage(), Constant.Message.BOOK_TICKET_SUCCESS_MSG);
