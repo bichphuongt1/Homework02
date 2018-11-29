@@ -2,9 +2,11 @@ package constant;
 
 public enum TabMenu {
 	LOGIN ("Login"),
+	LOGOUT ("Log out"),
 	REGISTER ("Register"),
 	CHANGE_PASSWORD ("Change password"),
-	MY_TICKET ("My ticket")
+	MY_TICKET ("My ticket"),
+	BOOK_TICKET ("Book ticket"),
 	;
 	
 	private String tab;

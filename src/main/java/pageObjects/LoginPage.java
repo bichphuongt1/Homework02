@@ -13,7 +13,7 @@ public class LoginPage extends GeneralPage {
 	private final By btnLogin = By.xpath("//input[@value='login']");
 	public final By lblLoginErrorMsg = By.xpath("//div[@id='content']/p[@class='message error LoginForm']");
 	
-	public ElementHelper element = new ElementHelper();
+	public ElementHelper elementHelper = new ElementHelper();
 	
 	//Methods
 
@@ -22,21 +22,24 @@ public class LoginPage extends GeneralPage {
 		//Submit login credentials
 		if(!username.isEmpty())
 		{
-			element.enterText(username, txtUsername);
+			elementHelper.enterText(username, txtUsername);
 		}
 		if(!password.isEmpty())
 		{
-			element.enterText(password, txtPassword);
+			elementHelper.enterText(password, txtPassword);
 		}
 		for (int i = 0; i < times; i++) {
-			element.clickElement(btnLogin);
+			elementHelper.clickElement(btnLogin);
 		}	
 	}
 	
-	public String getWelcomeMessage(String username) {
+	public String getLoginWelcomeMessage(String username) {
 		return Constant.Message.LOGIN_WELCOME_MSG + username; 
 	}
 	
+	public String getLoginErrorMessage () {
+		return Constant.WEBDRIVER.findElement(lblLoginErrorMsg).getText();
+	}
 }
 
 

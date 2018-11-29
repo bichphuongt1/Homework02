@@ -9,42 +9,28 @@ import constant.TabMenu;
 public class ElementHelper {
 	
 	public String tabName = "//span[normalize-space()='%s']";
-	
 	public WebElement getTabElement(TabMenu tabMenu) {
 		return Constant.WEBDRIVER.findElement(By.xpath(String.format(tabName, tabMenu.getValue())));
 	}
 	
 
-	
-	
-	
-	public WebElement getWebElement(By locator) {
-		return Constant.WEBDRIVER.findElement(locator);
-	}
-	
 	public void enterText(String str, By locator) {
-		getWebElement(locator).sendKeys(str);
+		Constant.WEBDRIVER.findElement(locator).sendKeys(str);
 	}
 	
 	public void clickElement(By locator) {
-		getWebElement(locator).click();
+		Constant.WEBDRIVER.findElement(locator).click();
 	}
-	
-	
-	
 	
 	public String getTextElement(By locator) {
-		return getWebElement(locator).getText();
+		return Constant.WEBDRIVER.findElement(locator).getText();
 	}
 	
-	public boolean isElementDisplay(By locator) {
+	public boolean isTabDisplayed(TabMenu tab) {
 		try	{
-			WebElement webElement = getWebElement(locator);
-			boolean isDisplay = webElement.isDisplayed();
-			return isDisplay;
+			return getTabElement(tab).isDisplayed();
 		} catch(Exception NoSuchElementException) {
 			return false;
 		}
-		
 	}
 }
