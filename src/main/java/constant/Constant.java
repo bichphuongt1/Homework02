@@ -6,24 +6,26 @@ public class Constant {
 
 	public static WebDriver WEBDRIVER;
 	public static WebDriver WEBDRIVER_FAKE;
-//	public static final String RAILWAY_URL = "http://192.168.189.206:8888";
+//	public static final String RAILWAY_URL = "https://dbdeec00.ngrok.io";
 	public static final String RAILWAY_URL = "http://localhost:8888";
 	public static final String FAKE_EMAIL_URL = "https://mailto.space/";
 	
-	public static final int LIMITTED_TIMES = 4;
+	public static final int LIMITTED_LOGIN_TIMES = 4;
+	public static final int LOGIN_ONE_TIME = 1;
 	
 	//User informations
 	public class UserInfo {
 		public static final String USERNAME = "phuong.nguyen@logigear.com";
-		public static final String USERNAME_02 = "ntbp.bich@gmail.com";
+		public static final String USERNAME_USING_CHANGE_PASSWORD = "ntbp.bich@gmail.com";
 		public static final String INVALID_USERNAME = "phuong.nguyen@yahoo.com";
 		public static final String PASSWORD = "123456789111";
+		public static final String NEW_PASSWORD = "123456789";
 		public static final String CONFIRM_PASSWORD = "12345";
 		public static final String INVALID_PASSWORD = "123";
 		public static final String BLANK = "";
 		public static final String PID = "87654321";
-		
-		public static final String NEW_PASSWORD = "1234567891";
+		public static final String USERNAME_EMAIL = "p";
+
 	}
 	
 	// Error Message
@@ -44,24 +46,28 @@ public class Constant {
 		public static final String CHANGE_PASSWORD_SUCCESS_MSG = "Your password has been updated!";
 		
 		public static final String BOOK_TICKET_SUCCESS_MSG = "Ticket booked successfully!";
+	
 	}
 
 	// Page title
-	public class PageTitle {
+	public class PageName {
 		public static final String LOGIN = "Login page";
 		public static final String MY_TICKET = "Manage ticket";
 		public static final String CHANGE_PASSWORD = "Change password";
 		public static final String REGISTER = "";
+	
 	}
 	
 	// Book ticket
-		public class BookTicket {
-			public static final String DEPART_DATE = "12/5/2018";
-			public static final String DEPART_STATION = "Sài Gòn";
-			public static final String ARRIVE_STATION = "Nha Trang";
-			public static final String SEAT_TYPE = "Soft bed with air conditioner";
-			public static final String TICKET_AMOUNT = "1";
-		}
+	public class BookTicket {
+		public static final String DEPART_DATE = "12/5/2018";
+		public static final String DEPART_STATION = "Sài Gòn";
+		public static final String ARRIVE_STATION = "Nha Trang";
+		public static final String SEAT_TYPE = "Soft bed with air conditioner";
+		public static final String TICKET_AMOUNT = "1";
+	
+	}
+
 }
 
 

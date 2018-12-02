@@ -45,10 +45,15 @@ public class BookTicketPage extends GeneralPage {
 	}
 	
 	public void bookTicket() {
+		selectDepartDate(Constant.BookTicket.DEPART_DATE);
+		selectDepartStation(Constant.BookTicket.DEPART_STATION);
+		selectArriveStation(Constant.BookTicket.ARRIVE_STATION);
+		selectSeatType(Constant.BookTicket.SEAT_TYPE);
+		selectTicketAmount(Constant.BookTicket.TICKET_AMOUNT);
 		Constant.WEBDRIVER.findElement(btnBookTicket).click();
 	}
 	
 	public String getBookTicketSuccessMessage() {
-		return Constant.WEBDRIVER.findElement(lblPageTitle).getText();
+		return Constant.WEBDRIVER.findElement(lblPageName).getText();
 	}
 }

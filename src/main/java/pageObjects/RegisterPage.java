@@ -25,6 +25,14 @@ public class RegisterPage extends GeneralPage {
 	public ElementHelper elementHelper = new ElementHelper();
 	
 	//methods
+	public void register(String email, String password, String confirmPassword) {
+		elementHelper.enterText(email, txtEmail);
+		elementHelper.enterText(password, txtPassword);
+		elementHelper.enterText(confirmPassword, txtConfirmPassword);
+		elementHelper.enterText(Constant.UserInfo.PID, txtPID);
+		elementHelper.clickElement(btnRegister);
+	}
+	
 	public void register(String email, String password, String confirmPassword, String pid) {
 		elementHelper.enterText(email, txtEmail);
 		elementHelper.enterText(password, txtPassword);
@@ -34,7 +42,7 @@ public class RegisterPage extends GeneralPage {
 	}
 	
 	public String getRegisterSuccessMessage() {
-		return Constant.WEBDRIVER.findElement(lblPageTitle).getText();
+		return Constant.WEBDRIVER.findElement(lblPageName).getText();
 	}
 	
 	public String getRegisterErrorMessage() {
@@ -53,10 +61,10 @@ public class RegisterPage extends GeneralPage {
 		Constant.WEBDRIVER.findElement(txtEmail).sendKeys(Keys.CONTROL + "v");
 	}
 	
-	public void register(String password, String confirmPassword, String pid) {
+	public void register(String password, String confirmPassword) {
 		elementHelper.enterText(password, txtPassword);
 		elementHelper.enterText(confirmPassword, txtConfirmPassword);
-		elementHelper.enterText(pid, txtPID);
+		elementHelper.enterText(Constant.UserInfo.PID, txtPID);
 		elementHelper.clickElement(btnRegister);
 	}
 	

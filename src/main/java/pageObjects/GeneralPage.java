@@ -7,7 +7,7 @@ import constant.TabMenu;
 
 public class GeneralPage{
 	// Locators	
-	public final By lblPageTitle = By.xpath("//div[@id='content']/h1");
+	public final By lblPageName = By.xpath("//div[@id='content']/h1");
 	public final By lblWelcomeMessage = By.xpath("//div[@class='account']");
 //	public final By lblErrorMsg = By.xpath("//div[@id='content']/p[@class='message error']");
 	
@@ -22,8 +22,8 @@ public class GeneralPage{
 		return Constant.WEBDRIVER.findElement(lblWelcomeMessage).getText();
 	}
 	
-	public String getPageTitle() {
-		return Constant.WEBDRIVER.findElement(lblPageTitle).getText();
+	public String getPageName() {
+		return Constant.WEBDRIVER.findElement(lblPageName).getText();
 	}
 	
 	public void logout() {

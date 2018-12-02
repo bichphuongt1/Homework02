@@ -6,7 +6,7 @@ public enum TabMenu {
 	REGISTER ("Register"),
 	CHANGE_PASSWORD ("Change password"),
 	MY_TICKET ("My ticket"),
-	BOOK_TICKET ("Book ticket"),
+	BOOK_TICKET ("Book ticket")
 	;
 	
 	private String tab;
@@ -19,10 +19,5 @@ public enum TabMenu {
     public String getValue() {
         return tab;
     }
-    public static void main(String[] args) {
-
-		//whois.arin.net
-        System.out.println(TabMenu.LOGIN.getValue());
-        System.out.println("\n" + TabMenu.REGISTER.getValue());
-    }
+    
 }

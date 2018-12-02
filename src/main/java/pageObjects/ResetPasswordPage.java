@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import constant.Constant;
 
 public class ResetPasswordPage {
+	
 	private final By txtEmail = By.id("copy");
 	private final By activeLink = By.xpath("//body/a");
 	private final By inbox = By.xpath("//tr[@class='message unread']/td[@class='message_cell unread']");	

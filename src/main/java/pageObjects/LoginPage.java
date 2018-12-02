@@ -12,14 +12,11 @@ public class LoginPage extends GeneralPage {
 	private final By txtPassword = By.id("password");
 	private final By btnLogin = By.xpath("//input[@value='login']");
 	public final By lblLoginErrorMsg = By.xpath("//div[@id='content']/p[@class='message error LoginForm']");
-	
+
 	public ElementHelper elementHelper = new ElementHelper();
 	
-	//Methods
-
 	public void login(String username, String password, int times)
 	{
-		//Submit login credentials
 		if(!username.isEmpty())
 		{
 			elementHelper.enterText(username, txtUsername);
