@@ -38,7 +38,6 @@ public class ForgotPasswordTest extends TestBase {
 		softAssert.assertEquals(resetPasswordPage.getResetPasswordErrorMessage(), Constant.Message.RESET_PASSWORD_TOKEN_ERROR_MSG);
 		// Remaining case: Verify Reset token is invalid.
 		softAssert.assertAll();
-		
 	}
 	
 	@Test(description = "TC13 - Errors display if password and confirm password don't match when resetting password")

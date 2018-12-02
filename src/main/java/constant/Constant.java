@@ -66,19 +66,8 @@ public class Constant {
 		public static final String MY_TICKET = "Manage ticket";
 		public static final String CHANGE_PASSWORD = "Change password";
 		public static final String REGISTER = "";
-	
 	}
 	
-	// Book ticket
-	public class BookTicket {
-		public static final String DEPART_DATE = "12/5/2018";
-		public static final String DEPART_STATION = "Sài Gòn";
-		public static final String ARRIVE_STATION = "Nha Trang";
-		public static final String SEAT_TYPE = "Soft bed with air conditioner";
-		public static final String TICKET_AMOUNT = "1";
-	
-	}
-
 }
 
 
