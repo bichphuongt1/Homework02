@@ -3,7 +3,6 @@ package test.password;
 import static org.testng.Assert.assertEquals;
 
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import constant.Constant;
 import constant.TabMenu;
