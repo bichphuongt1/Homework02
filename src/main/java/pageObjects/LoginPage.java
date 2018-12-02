@@ -12,7 +12,8 @@ public class LoginPage extends GeneralPage {
 	private final By txtPassword = By.id("password");
 	private final By btnLogin = By.xpath("//input[@value='login']");
 	public final By lblLoginErrorMsg = By.xpath("//div[@id='content']/p[@class='message error LoginForm']");
-
+	public final By lnkForgotPassword = By.xpath("//a[@href='/Account/ForgotPassword.cshtml']");
+	
 	public ElementHelper elementHelper = new ElementHelper();
 	
 	public void login(String username, String password, int times)
@@ -36,6 +37,14 @@ public class LoginPage extends GeneralPage {
 	
 	public String getLoginErrorMessage () {
 		return Constant.WEBDRIVER.findElement(lblLoginErrorMsg).getText();
+	}
+	
+	public void openLink(By locator) {
+		Constant.WEBDRIVER.findElement(locator).click();
+	}
+	
+	public void openForgotPasswordLink() {
+		openLink(lnkForgotPassword);
 	}
 }
 

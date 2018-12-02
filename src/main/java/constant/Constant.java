@@ -8,10 +8,17 @@ public class Constant {
 	public static WebDriver WEBDRIVER_FAKE;
 //	public static final String RAILWAY_URL = "https://dbdeec00.ngrok.io";
 	public static final String RAILWAY_URL = "http://localhost:8888";
-	public static final String FAKE_EMAIL_URL = "https://mailto.space/";
+	public static final String EMAIL_INBOX_URL = "https://mailinator.com/v3/index.jsp?zone=public&query=%s#/#inboxpane";
 	
 	public static final int LIMITTED_LOGIN_TIMES = 4;
 	public static final int LOGIN_ONE_TIME = 1;
+	public static final boolean ACTIVE = true;
+	public static final boolean NO_ACTIVE = false;
+	public static final int SHORT_TIMEOUT = 5;
+	
+	public class FormName {
+		public static final String PASSWORD_CHANGE_FORM = "Password Change Form";
+	}
 	
 	//User informations
 	public class UserInfo {
@@ -46,7 +53,11 @@ public class Constant {
 		public static final String CHANGE_PASSWORD_SUCCESS_MSG = "Your password has been updated!";
 		
 		public static final String BOOK_TICKET_SUCCESS_MSG = "Ticket booked successfully!";
-	
+		
+		public static final String RESET_PASSWORD_TOKEN_ERROR_MSG = "The password reset token is incorrect or may be expired. Visit the forgot password page to generate a new one.";
+		public static final String RESET_PASSWORD_ERROR_MSG = "Could not reset password. Please correct the errors and try again.";
+		public static final String RESET_TOKEN_INVALID_MSG = "The password reset token is invalid.";
+		public static final String RESET_CONFIRM_PASSWORD_ERROR_MSG = "The password confirmation did not match the new password.";
 	}
 
 	// Page title

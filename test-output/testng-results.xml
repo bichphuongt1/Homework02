@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5175" started-at="2018-12-02T07:55:39Z" finished-at="2018-12-02T07:55:44Z">
+  <suite name="Default suite" duration-ms="22620" started-at="2018-12-02T15:40:22Z" finished-at="2018-12-02T15:40:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5175" started-at="2018-12-02T07:55:39Z" finished-at="2018-12-02T07:55:44Z">
-      <class name="test.password.ChangePasswordTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.password.ChangePasswordTest@77cd7a0]" name="beforeClass" is-config="true" duration-ms="3962" started-at="2018-12-02T07:55:39Z" finished-at="2018-12-02T07:55:43Z">
+    <test name="Default test" duration-ms="22620" started-at="2018-12-02T15:40:22Z" finished-at="2018-12-02T15:40:45Z">
+      <class name="test.password.ForgotPasswordTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.password.ForgotPasswordTest@7156f8cf]" name="beforeClass" is-config="true" duration-ms="3807" started-at="2018-12-02T15:40:22Z" finished-at="2018-12-02T15:40:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.password.ChangePasswordTest@77cd7a0]" name="beforeMethod" is-config="true" duration-ms="125" started-at="2018-12-02T07:55:43Z" finished-at="2018-12-02T07:55:43Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.password.ForgotPasswordTest@7156f8cf]" name="beforeMethod" is-config="true" duration-ms="122" started-at="2018-12-02T15:40:26Z" finished-at="2018-12-02T15:40:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC09()[pri:0, instance:test.password.ChangePasswordTest@77cd7a0]" name="TC09" duration-ms="1076" started-at="2018-12-02T07:55:43Z" description="TC09 - User can change password." finished-at="2018-12-02T07:55:44Z">
+        <test-method status="PASS" signature="TC13()[pri:0, instance:test.password.ForgotPasswordTest@7156f8cf]" name="TC13" duration-ms="18676" started-at="2018-12-02T15:40:26Z" description="TC13 - Errors display if password and confirm password don&#039;t match when resetting password" finished-at="2018-12-02T15:40:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC09 -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.password.ChangePasswordTest@77cd7a0]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-12-02T07:55:44Z" finished-at="2018-12-02T07:55:44Z">
+        </test-method> <!-- TC13 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.password.ForgotPasswordTest@7156f8cf]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-12-02T15:40:45Z" finished-at="2018-12-02T15:40:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- test.password.ChangePasswordTest -->
+      </class> <!-- test.password.ForgotPasswordTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

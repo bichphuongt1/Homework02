@@ -5,17 +5,15 @@ import common.ElementHelper;
 import constant.Constant;
 import constant.TabMenu;
 
-public class GeneralPage{
+public class GeneralPage {
 	// Locators	
 	public final By lblPageName = By.xpath("//div[@id='content']/h1");
 	public final By lblWelcomeMessage = By.xpath("//div[@class='account']");
 //	public final By lblErrorMsg = By.xpath("//div[@id='content']/p[@class='message error']");
 	
-	public ElementHelper elementHelper = new ElementHelper();
-	
 	//methods
 	public void gotoPage(TabMenu tab) {
-		elementHelper.getTabElement(tab).click();
+		ElementHelper.getTabElement(tab).click();
 	}
 	
 	public String getWelcomeMessage() {
@@ -27,8 +25,8 @@ public class GeneralPage{
 	}
 	
 	public void logout() {
-		if(elementHelper.isTabDisplayed(TabMenu.LOGOUT)) {
-			elementHelper.getTabElement(TabMenu.LOGOUT).click();
+		if(ElementHelper.isTabDisplayed(TabMenu.LOGOUT)) {
+			ElementHelper.getTabElement(TabMenu.LOGOUT).click();
 		} 
 	}
 }

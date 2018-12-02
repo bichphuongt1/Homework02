@@ -5,7 +5,6 @@ import static org.testng.Assert.assertEquals;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import common.ElementHelper;
 import common.Utilities;
 import constant.Constant;
 import constant.TabMenu;
@@ -18,19 +17,18 @@ public class RegisterTest extends TestBase{
 	
 	HomePage homePage = new HomePage();
 	RegisterPage registerPage = new RegisterPage();
-	ElementHelper elementHelper = new ElementHelper();
 	
 	@Test(description = "TC07 - User can create new account'")
 	public void TC07() {
 		homePage.gotoPage(TabMenu.REGISTER);
-		registerPage.register(Utilities.generateEmail(), Constant.UserInfo.PASSWORD, Constant.UserInfo.PASSWORD);
+		registerPage.register(Utilities.generateEmail(), Constant.UserInfo.PASSWORD, Constant.UserInfo.PASSWORD, Constant.NO_ACTIVE);
 		assertEquals(registerPage.getRegisterSuccessMessage(), Constant.Message.REGISTER_SUCCESS_MSG);
 	}
 	
 	@Test(description = "TC10 - User can't create account with \"Confirm password\" is not the same with \"Password\"")
 	public void TC10() {
 		homePage.gotoPage(TabMenu.REGISTER);
-		registerPage.register(Utilities.generateEmail(), Constant.UserInfo.PASSWORD, Constant.UserInfo.PASSWORD + "1");
+		registerPage.register(Utilities.generateEmail(), Constant.UserInfo.PASSWORD, Constant.UserInfo.PASSWORD + "1", Constant.NO_ACTIVE);
 		assertEquals(registerPage.getRegisterErrorMessage(), Constant.Message.REGISTER_ERROR_MSG);
 	}
 	

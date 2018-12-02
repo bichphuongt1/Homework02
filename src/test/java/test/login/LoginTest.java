@@ -18,7 +18,6 @@ public class LoginTest extends TestBase {
 
 	LoginPage loginPage = new LoginPage();;
 	HomePage homePage = new HomePage();
-	ElementHelper elementHelper = new ElementHelper();
 
 	@Test(description = "TC01 - User can log into Railway with valid username and password")
 	public void TC01() {
@@ -61,9 +60,9 @@ public class LoginTest extends TestBase {
 		homePage.gotoPage(TabMenu.LOGIN);
 		loginPage.login(Constant.UserInfo.USERNAME, Constant.UserInfo.PASSWORD, Constant.LOGIN_ONE_TIME);
 
-		softAssert.assertTrue(elementHelper.isTabDisplayed(TabMenu.MY_TICKET));
-		softAssert.assertTrue(elementHelper.isTabDisplayed(TabMenu.CHANGE_PASSWORD));
-		softAssert.assertTrue(elementHelper.isTabDisplayed(TabMenu.LOGOUT));
+		softAssert.assertTrue(ElementHelper.isTabDisplayed(TabMenu.MY_TICKET));
+		softAssert.assertTrue(ElementHelper.isTabDisplayed(TabMenu.CHANGE_PASSWORD));
+		softAssert.assertTrue(ElementHelper.isTabDisplayed(TabMenu.LOGOUT));
 
 		loginPage.gotoPage(TabMenu.MY_TICKET);
 		softAssert.assertEquals(loginPage.getPageName(), Constant.PageName.MY_TICKET);
@@ -80,7 +79,7 @@ public class LoginTest extends TestBase {
 		homePage.gotoPage(TabMenu.REGISTER);
 		RegisterPage registerPage = new RegisterPage();
 		String email = Utilities.generateEmail();
-		registerPage.register(email, Constant.UserInfo.PASSWORD, Constant.UserInfo.PASSWORD);
+		registerPage.register(email, Constant.UserInfo.PASSWORD, Constant.UserInfo.PASSWORD, Constant.NO_ACTIVE);
 		registerPage.gotoPage(TabMenu.LOGIN);
 		loginPage.login(email, Constant.UserInfo.PASSWORD, Constant.LOGIN_ONE_TIME);
 		assertEquals(loginPage.getLoginErrorMessage(), Constant.Message.LOGIN_INVALID_ACCOUNT);

@@ -6,6 +6,7 @@ import org.openqa.selenium.Keys;
 import com.github.javafaker.Faker;
 
 import common.ElementHelper;
+import common.Utilities;
 import constant.Constant;
 
 public class RegisterPage extends GeneralPage {
@@ -22,23 +23,25 @@ public class RegisterPage extends GeneralPage {
 	private final By lblPidErrorMsg = By.xpath("//label[@for='pid' and @class='validation-error']");
 	
 	Faker faker = new Faker();
-	public ElementHelper elementHelper = new ElementHelper();
 	
-	//methods
-	public void register(String email, String password, String confirmPassword) {
-		elementHelper.enterText(email, txtEmail);
-		elementHelper.enterText(password, txtPassword);
-		elementHelper.enterText(confirmPassword, txtConfirmPassword);
-		elementHelper.enterText(Constant.UserInfo.PID, txtPID);
-		elementHelper.clickElement(btnRegister);
+	//methods		
+	public void register(String email, String password, String confirmPassword, boolean active) {
+		ElementHelper.enterText(email, txtEmail);
+		ElementHelper.enterText(password, txtPassword);
+		ElementHelper.enterText(confirmPassword, txtConfirmPassword);
+		ElementHelper.enterText(Constant.UserInfo.PID, txtPID);
+		ElementHelper.clickElement(btnRegister);
+		if(active) {
+			Utilities.openActiveEmailLink(email);
+		}
 	}
 	
 	public void register(String email, String password, String confirmPassword, String pid) {
-		elementHelper.enterText(email, txtEmail);
-		elementHelper.enterText(password, txtPassword);
-		elementHelper.enterText(confirmPassword, txtConfirmPassword);
-		elementHelper.enterText(pid, txtPID);
-		elementHelper.clickElement(btnRegister);
+		ElementHelper.enterText(email, txtEmail);
+		ElementHelper.enterText(password, txtPassword);
+		ElementHelper.enterText(confirmPassword, txtConfirmPassword);
+		ElementHelper.enterText(pid, txtPID);
+		ElementHelper.clickElement(btnRegister);
 	}
 	
 	public String getRegisterSuccessMessage() {
@@ -56,16 +59,7 @@ public class RegisterPage extends GeneralPage {
 	public String getPidErrorMessage() {
 		return Constant.WEBDRIVER.findElement(lblPidErrorMsg).getText();
 	}
-	
-	public void inputEmail() {
-		Constant.WEBDRIVER.findElement(txtEmail).sendKeys(Keys.CONTROL + "v");
-	}
-	
-	public void register(String password, String confirmPassword) {
-		elementHelper.enterText(password, txtPassword);
-		elementHelper.enterText(confirmPassword, txtConfirmPassword);
-		elementHelper.enterText(Constant.UserInfo.PID, txtPID);
-		elementHelper.clickElement(btnRegister);
-	}
+		
+
 	
 }
