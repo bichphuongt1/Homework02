@@ -1,45 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17551" started-at="2018-12-02T04:33:51Z" finished-at="2018-12-02T04:34:09Z">
+  <suite name="Default suite" duration-ms="5175" started-at="2018-12-02T07:55:39Z" finished-at="2018-12-02T07:55:44Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17551" started-at="2018-12-02T04:33:51Z" finished-at="2018-12-02T04:34:09Z">
-      <class name="test.register.RegisterTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.register.RegisterTest@2eb31735]" name="beforeClass" is-config="true" duration-ms="3847" started-at="2018-12-02T04:33:51Z" finished-at="2018-12-02T04:33:55Z">
+    <test name="Default test" duration-ms="5175" started-at="2018-12-02T07:55:39Z" finished-at="2018-12-02T07:55:44Z">
+      <class name="test.password.ChangePasswordTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.password.ChangePasswordTest@77cd7a0]" name="beforeClass" is-config="true" duration-ms="3962" started-at="2018-12-02T07:55:39Z" finished-at="2018-12-02T07:55:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.register.RegisterTest@2eb31735]" name="beforeMethod" is-config="true" duration-ms="3664" started-at="2018-12-02T04:33:55Z" finished-at="2018-12-02T04:33:59Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.password.ChangePasswordTest@77cd7a0]" name="beforeMethod" is-config="true" duration-ms="125" started-at="2018-12-02T07:55:43Z" finished-at="2018-12-02T07:55:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC07()[pri:0, instance:test.register.RegisterTest@2eb31735]" name="TC07" duration-ms="5292" started-at="2018-12-02T04:33:59Z" description="TC07 - User can create new account&#039;" finished-at="2018-12-02T04:34:04Z">
+        <test-method status="PASS" signature="TC09()[pri:0, instance:test.password.ChangePasswordTest@77cd7a0]" name="TC09" duration-ms="1076" started-at="2018-12-02T07:55:43Z" description="TC09 - User can change password." finished-at="2018-12-02T07:55:44Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC07 -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.register.RegisterTest@2eb31735]" name="beforeMethod" is-config="true" duration-ms="963" started-at="2018-12-02T04:34:04Z" finished-at="2018-12-02T04:34:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC10()[pri:0, instance:test.register.RegisterTest@2eb31735]" name="TC10" duration-ms="1396" started-at="2018-12-02T04:34:05Z" description="TC10 - User can&#039;t create account with &quot;Confirm password&quot; is not the same with &quot;Password&quot;" finished-at="2018-12-02T04:34:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC10 -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.register.RegisterTest@2eb31735]" name="beforeMethod" is-config="true" duration-ms="960" started-at="2018-12-02T04:34:06Z" finished-at="2018-12-02T04:34:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC11()[pri:0, instance:test.register.RegisterTest@2eb31735]" name="TC11" duration-ms="1410" started-at="2018-12-02T04:34:07Z" description="TC11 - User can&#039;t create account while password and PID fields are empty" finished-at="2018-12-02T04:34:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC11 -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.register.RegisterTest@2eb31735]" name="afterClass" is-config="true" duration-ms="1" started-at="2018-12-02T04:34:09Z" finished-at="2018-12-02T04:34:09Z">
+        </test-method> <!-- TC09 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.password.ChangePasswordTest@77cd7a0]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-12-02T07:55:44Z" finished-at="2018-12-02T07:55:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- test.register.RegisterTest -->
+      </class> <!-- test.password.ChangePasswordTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
