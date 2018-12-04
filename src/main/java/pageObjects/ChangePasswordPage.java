@@ -13,13 +13,11 @@ public class ChangePasswordPage extends GeneralPage {
 	public static By btnChangePassword = By.xpath("//input[@value='Change Password']");
 	public static By lblMessage = By.xpath("//p[@class='message success']");
 	
-	public ElementHelper elementHelper = new ElementHelper();
-	
 	public void changePassword(String currentPassword, String newPassword, String newConfirmPassword) {
-		elementHelper.enterText(currentPassword, txtCurrentPassword);
-		elementHelper.enterText(newPassword, txtNewPassword);
-		elementHelper.enterText(newConfirmPassword, txtNewConfirmPassword);
-		elementHelper.clickElement(btnChangePassword);
+		ElementHelper.enterText(currentPassword, txtCurrentPassword);
+		ElementHelper.enterText(newPassword, txtNewPassword);
+		ElementHelper.enterText(newConfirmPassword, txtNewConfirmPassword);
+		ElementHelper.clickElement(btnChangePassword);
 	}
 	
 	public String getChangePasswordSuccessMessage() {

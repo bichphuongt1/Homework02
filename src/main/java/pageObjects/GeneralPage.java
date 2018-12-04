@@ -9,7 +9,6 @@ public class GeneralPage {
 	// Locators	
 	public final By lblPageName = By.xpath("//div[@id='content']/h1");
 	public final By lblWelcomeMessage = By.xpath("//div[@class='account']");
-//	public final By lblErrorMsg = By.xpath("//div[@id='content']/p[@class='message error']");
 	
 	//methods
 	public void gotoPage(TabMenu tab) {

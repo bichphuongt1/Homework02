@@ -14,20 +14,18 @@ public class LoginPage extends GeneralPage {
 	public final By lblLoginErrorMsg = By.xpath("//div[@id='content']/p[@class='message error LoginForm']");
 	public final By lnkForgotPassword = By.xpath("//a[@href='/Account/ForgotPassword.cshtml']");
 	
-	public ElementHelper elementHelper = new ElementHelper();
-	
 	public void login(String username, String password, int times)
 	{
 		if(!username.isEmpty())
 		{
-			elementHelper.enterText(username, txtUsername);
+			ElementHelper.enterText(username, txtUsername);
 		}
 		if(!password.isEmpty())
 		{
-			elementHelper.enterText(password, txtPassword);
+			ElementHelper.enterText(password, txtPassword);
 		}
 		for (int i = 0; i < times; i++) {
-			elementHelper.clickElement(btnLogin);
+			ElementHelper.clickElement(btnLogin);
 		}	
 	}
 	

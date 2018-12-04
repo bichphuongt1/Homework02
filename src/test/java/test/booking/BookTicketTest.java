@@ -1,7 +1,5 @@
 package test.booking;
 
-import java.util.Date;
-
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -12,7 +10,6 @@ import constant.DepartStation;
 import constant.SeatType;
 import constant.TabMenu;
 import constant.TicketInfo;
-import constant.Constant.FormatDate;
 import pageObjects.BookTicketPage;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
