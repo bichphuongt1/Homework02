@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6070" started-at="2018-12-04T16:16:17Z" finished-at="2018-12-04T16:16:23Z">
+  <suite name="Default suite" duration-ms="5401" started-at="2018-12-04T16:34:46Z" finished-at="2018-12-04T16:34:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6070" started-at="2018-12-04T16:16:17Z" finished-at="2018-12-04T16:16:23Z">
+    <test name="Default test" duration-ms="5401" started-at="2018-12-04T16:34:46Z" finished-at="2018-12-04T16:34:51Z">
       <class name="test.myticket.MyTicketTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.myticket.MyTicketTest@204f30ec]" name="beforeClass" is-config="true" duration-ms="2051" started-at="2018-12-04T16:16:17Z" finished-at="2018-12-04T16:16:19Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.myticket.MyTicketTest@204f30ec]" name="beforeClass" is-config="true" duration-ms="3675" started-at="2018-12-04T16:34:46Z" finished-at="2018-12-04T16:34:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.myticket.MyTicketTest@204f30ec]" name="beforeMethod" is-config="true" duration-ms="2324" started-at="2018-12-04T16:16:19Z" finished-at="2018-12-04T16:16:22Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.myticket.MyTicketTest@204f30ec]" name="beforeMethod" is-config="true" duration-ms="86" started-at="2018-12-04T16:34:50Z" finished-at="2018-12-04T16:34:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC16()[pri:0, instance:test.myticket.MyTicketTest@204f30ec]" name="TC16" duration-ms="1662" started-at="2018-12-04T16:16:22Z" description="TC16 - User can cancel a ticket." finished-at="2018-12-04T16:16:23Z">
+        <test-method status="PASS" signature="TC16()[pri:0, instance:test.myticket.MyTicketTest@204f30ec]" name="TC16" duration-ms="1065" started-at="2018-12-04T16:34:50Z" description="TC16 - User can cancel a ticket." finished-at="2018-12-04T16:34:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC16 -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.myticket.MyTicketTest@204f30ec]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-12-04T16:16:23Z" finished-at="2018-12-04T16:16:23Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.myticket.MyTicketTest@204f30ec]" name="afterClass" is-config="true" duration-ms="555" started-at="2018-12-04T16:34:51Z" finished-at="2018-12-04T16:34:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
