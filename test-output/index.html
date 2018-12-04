@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Welcome\AppData\Local\Temp\testng-eclipse-465165752\testng-customsuite.xml</span>
+                    <span>testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.booking.BookTicketTest" hash-for-method="TC14">TC14</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.myticket.MyTicketTest" hash-for-method="TC16">TC16</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -120,16 +120,16 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">test.booking.BookTicketTest</span>
+              <span class="class-name">test.myticket.MyTicketTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC14">
-                  </a> <!-- TC14 -->
-                  <span class="method-name">TC14</span>
+                  <a name="TC16">
+                  </a> <!-- TC16 -->
+                  <span class="method-name">TC16</span>
                   <em>
-(TC14 - User can book 1 ticket at a time.)                  </em>
+(TC16 - User can cancel a ticket.)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,7 +137,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Welcome\AppData\Local\Temp\testng-eclipse-465165752\testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/b0/2j4kzrk957b9097cb0vd3hnm0000gn/T/testng-eclipse-1407093035/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -146,11 +146,11 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;test.booking.BookTicketTest&quot;&gt;
+      &lt;class name=&quot;test.myticket.MyTicketTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;TC14&quot;/&gt;
+          &lt;include name=&quot;TC16&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- test.booking.BookTicketTest --&gt;
+      &lt;/class&gt; &lt;!-- test.myticket.MyTicketTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -192,9 +192,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC14')
-data.setCell(0, 2, 'test.booking.BookTicketTest')
-data.setCell(0, 3, 1046);
+data.setCell(0, 1, 'TC16')
+data.setCell(0, 2, 'test.myticket.MyTicketTest')
+data.setCell(0, 3, 1662);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -214,16 +214,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">test.booking.BookTicketTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">TC15</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -232,22 +225,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">test.booking.BookTicketTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">test.myticket.MyTicketTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">3737 ms</span>
+                <span class="method-start">2063 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">TC14</span>
-                <span class="method-start">3858 ms</span>
+                <span class="method-name">TC16</span>
+                <span class="method-start">4387 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">4906 ms</span>
+                <span class="method-start">6053 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

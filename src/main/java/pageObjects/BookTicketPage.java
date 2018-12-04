@@ -82,4 +82,16 @@ public class BookTicketPage extends GeneralPage {
 	public String getAmount() {
 		return ElementHelper.getTextElement(tableAmount);
 	}
+	
+	public String getDepartStationSelectedOption() {
+		Select select = new Select(Constant.WEBDRIVER.findElement(departStation));
+		WebElement option = select.getFirstSelectedOption();
+		return option.getText();
+	}
+	
+	public String getArriveStationSelectedOption() {
+		Select select = new Select(Constant.WEBDRIVER.findElement(arriveStation));
+		WebElement option = select.getFirstSelectedOption();
+		return option.getText();
+	}
 }
