@@ -4,7 +4,9 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -75,5 +77,15 @@ public class Utilities {
 	public static String dateToStringWithFormat(Date date, String format) {
         DateFormat formatter = new SimpleDateFormat(format);
         return formatter.format(date);
+	}
+	
+	public static void acceptAlert() {
+	    Alert alert = Constant.WEBDRIVER.switchTo().alert();
+	    alert.accept();
+	}
+	
+	public static int numberOfRowsInTable(By by) {
+		List<WebElement> rows = Constant.WEBDRIVER.findElements(by);
+		return rows.size();
 	}
 }

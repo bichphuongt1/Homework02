@@ -38,21 +38,4 @@ public class BookTicketTest extends TestBase {
 		softAssert.assertEquals(bookTicketPage.getAmount(), String.valueOf(ticketInfo.getAmount()));
 		softAssert.assertAll();
 	}
-	
-	@Test(description = "TC15 - User can open \"Book ticket\" page by clicking on \"Book ticket\" link in \"Train timetable\" page")
-	public void TC15() {
-		
-		homePage.gotoPage(TabMenu.LOGIN);
-		
-		loginPage.login(Constant.UserInfo.USERNAME, Constant.UserInfo.PASSWORD, 1);
-		homePage.gotoPage(TabMenu.BOOK_TICKET);
-		bookTicketPage.bookTicket(ticketInfo);
-		softAssert.assertEquals(bookTicketPage.getBookTicketSuccessMessage(), Constant.Message.BOOK_TICKET_SUCCESS_MSG);
-		softAssert.assertEquals(bookTicketPage.getDepartStation(), ticketInfo.getDepartStation());
-		softAssert.assertEquals(bookTicketPage.getArriveStation(), ticketInfo.getArriveStation());
-		softAssert.assertEquals(bookTicketPage.getSeatType(), ticketInfo.getSeatType());
-		softAssert.assertEquals(bookTicketPage.getAmount(), String.valueOf(ticketInfo.getAmount()));
-		softAssert.assertAll();
-	}
-	
 }

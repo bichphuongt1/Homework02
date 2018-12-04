@@ -4,6 +4,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import common.Utilities;
+import constant.Constant;
 import pageObjects.HomePage;
 
 public class TestBase {
@@ -22,6 +23,6 @@ public class TestBase {
 
 	@AfterClass
 	public void afterClass() {
-//		Constant.WEBDRIVER.quit();
+		Constant.WEBDRIVER.quit();
 	}
 }

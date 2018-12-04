@@ -26,6 +26,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="E:/_BGLD/Working/_Logigear/Automation/Selenium/ImplementTC/javafaker-0.2-sources.jar.zip"/>
+	<classpathentry kind="lib" path="/Users/ThienTX/Downloads/selenium-server-standalone-3.141.59 (1).jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

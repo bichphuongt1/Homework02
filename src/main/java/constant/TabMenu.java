@@ -6,7 +6,8 @@ public enum TabMenu {
 	REGISTER ("Register"),
 	CHANGE_PASSWORD ("Change password"),
 	MY_TICKET ("My ticket"),
-	BOOK_TICKET ("Book ticket")
+	BOOK_TICKET ("Book ticket"),
+	TIMETABLE ("Timetable")
 	;
 	
 	private String tab;

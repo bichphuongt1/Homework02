@@ -70,6 +70,7 @@ public class Constant {
 		public static final String MY_TICKET = "Manage ticket";
 		public static final String CHANGE_PASSWORD = "Change password";
 		public static final String REGISTER = "";
+		public static final String BOOK_TICKET = "Book ticket";
 	}
 	
 }
