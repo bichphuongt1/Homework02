@@ -5,7 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import common.ElementHelper;
+import common.Utilities;
 import constant.Constant;
+import constant.Constant.FormatDate;
 import constant.TicketInfo;
 
 public class BookTicketPage extends GeneralPage {
@@ -53,7 +55,7 @@ public class BookTicketPage extends GeneralPage {
 	}
 	
 	public void bookTicket(TicketInfo ticketInfo) {
-		selectDepartDate(ticketInfo.getDepartDate().toString());
+		selectDepartDate(Utilities.dateToStringWithFormat(ticketInfo.getDepartDate(), FormatDate.FORMAT_STYLE));
 		selectDepartStation(ticketInfo.getDepartStation());
 		selectArriveStation(ticketInfo.getArriveStation());
 		selectSeatType(ticketInfo.getSeatType());

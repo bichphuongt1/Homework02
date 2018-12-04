@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22620" started-at="2018-12-02T15:40:22Z" finished-at="2018-12-02T15:40:45Z">
+  <suite name="Default suite" duration-ms="4912" started-at="2018-12-04T13:51:39Z" finished-at="2018-12-04T13:51:44Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22620" started-at="2018-12-02T15:40:22Z" finished-at="2018-12-02T15:40:45Z">
-      <class name="test.password.ForgotPasswordTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.password.ForgotPasswordTest@7156f8cf]" name="beforeClass" is-config="true" duration-ms="3807" started-at="2018-12-02T15:40:22Z" finished-at="2018-12-02T15:40:26Z">
+    <test name="Default test" duration-ms="4912" started-at="2018-12-04T13:51:39Z" finished-at="2018-12-04T13:51:44Z">
+      <class name="test.booking.BookTicketTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.booking.BookTicketTest@13deb50e]" name="beforeClass" is-config="true" duration-ms="3730" started-at="2018-12-04T13:51:39Z" finished-at="2018-12-04T13:51:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.password.ForgotPasswordTest@7156f8cf]" name="beforeMethod" is-config="true" duration-ms="122" started-at="2018-12-02T15:40:26Z" finished-at="2018-12-02T15:40:26Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.booking.BookTicketTest@13deb50e]" name="beforeMethod" is-config="true" duration-ms="121" started-at="2018-12-04T13:51:42Z" finished-at="2018-12-04T13:51:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC13()[pri:0, instance:test.password.ForgotPasswordTest@7156f8cf]" name="TC13" duration-ms="18676" started-at="2018-12-02T15:40:26Z" description="TC13 - Errors display if password and confirm password don&#039;t match when resetting password" finished-at="2018-12-02T15:40:45Z">
+        <test-method status="PASS" signature="TC14()[pri:0, instance:test.booking.BookTicketTest@13deb50e]" name="TC14" duration-ms="1046" started-at="2018-12-04T13:51:43Z" description="TC14 - User can book 1 ticket at a time." finished-at="2018-12-04T13:51:44Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC13 -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.password.ForgotPasswordTest@7156f8cf]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-12-02T15:40:45Z" finished-at="2018-12-02T15:40:45Z">
+        </test-method> <!-- TC14 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.booking.BookTicketTest@13deb50e]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-12-04T13:51:44Z" finished-at="2018-12-04T13:51:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- test.password.ForgotPasswordTest -->
+      </class> <!-- test.booking.BookTicketTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

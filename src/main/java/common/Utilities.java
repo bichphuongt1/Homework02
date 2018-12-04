@@ -1,5 +1,10 @@
 package common;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -56,5 +61,19 @@ public class Utilities {
 	public static WebElement waitForElement(By locator) {
 	    WebDriverWait wait = new WebDriverWait(Constant.WEBDRIVER, Constant.SHORT_TIMEOUT);
 	    return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	}
+	
+	public static Date plusDays(int plusDays) {
+		Date date = new Date();
+		Calendar calendar = Calendar.getInstance(); 
+		calendar.setTime(date); 
+		calendar.add(Calendar.DATE, plusDays);
+		date = calendar.getTime();
+		return date;
+	}
+	
+	public static String dateToStringWithFormat(Date date, String format) {
+        DateFormat formatter = new SimpleDateFormat(format);
+        return formatter.format(date);
 	}
 }

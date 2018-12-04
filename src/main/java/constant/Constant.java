@@ -32,7 +32,11 @@ public class Constant {
 		public static final String BLANK = "";
 		public static final String PID = "87654321";
 		public static final String USERNAME_EMAIL = "p";
-
+	}
+	
+	// Format date
+	public class FormatDate {
+		public static final String FORMAT_STYLE = "MM/d/yyyy";
 	}
 	
 	// Error Message
