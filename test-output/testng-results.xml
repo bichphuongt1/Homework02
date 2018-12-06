@@ -1,67 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="1" total="2" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26013" started-at="2018-12-06T13:20:12Z" finished-at="2018-12-06T13:20:38Z">
+  <suite name="Default suite" duration-ms="4935" started-at="2018-12-06T13:34:44Z" finished-at="2018-12-06T13:34:49Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="26013" started-at="2018-12-06T13:20:12Z" finished-at="2018-12-06T13:20:38Z">
-      <class name="test.password.ForgotPasswordTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.password.ForgotPasswordTest@7156f8cf]" name="beforeClass" is-config="true" duration-ms="3712" started-at="2018-12-06T13:20:12Z" finished-at="2018-12-06T13:20:15Z">
+    <test name="Default test" duration-ms="4935" started-at="2018-12-06T13:34:44Z" finished-at="2018-12-06T13:34:49Z">
+      <class name="test.password.ChangePasswordTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.password.ChangePasswordTest@42e26948]" name="beforeClass" is-config="true" duration-ms="3723" started-at="2018-12-06T13:34:44Z" finished-at="2018-12-06T13:34:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.password.ForgotPasswordTest@7156f8cf]" name="beforeMethod" is-config="true" duration-ms="122" started-at="2018-12-06T13:20:15Z" finished-at="2018-12-06T13:20:16Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.password.ChangePasswordTest@42e26948]" name="beforeMethod" is-config="true" duration-ms="127" started-at="2018-12-06T13:34:48Z" finished-at="2018-12-06T13:34:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="TC12()[pri:0, instance:test.password.ForgotPasswordTest@7156f8cf]" name="TC12" duration-ms="22165" started-at="2018-12-06T13:20:16Z" description="TC12 - Errors display when password reset token is blank" finished-at="2018-12-06T13:20:38Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-expected [The password reset token is incorrect or may be expired. Visit the forgot password page to generate a new one.] but found [Could not reset password. Please correct the errors and try again.]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-expected [The password reset token is incorrect or may be expired. Visit the forgot password page to generate a new one.] but found [Could not reset password. Please correct the errors and try again.]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
-at test.password.ForgotPasswordTest.TC12(ForgotPasswordTest.java:40)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="TC09()[pri:0, instance:test.password.ChangePasswordTest@42e26948]" name="TC09" duration-ms="1071" started-at="2018-12-06T13:34:48Z" description="TC09 - User can change password." finished-at="2018-12-06T13:34:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC12 -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.password.ForgotPasswordTest@7156f8cf]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-12-06T13:20:38Z" finished-at="2018-12-06T13:20:38Z">
+        </test-method> <!-- TC09 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.password.ChangePasswordTest@42e26948]" name="afterClass" is-config="true" duration-ms="1" started-at="2018-12-06T13:34:49Z" finished-at="2018-12-06T13:34:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- test.password.ForgotPasswordTest -->
+      </class> <!-- test.password.ChangePasswordTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
