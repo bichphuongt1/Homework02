@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import com.github.javafaker.Faker;
 
 import common.ElementHelper;
-import common.Utilities;
+import common.EmailUtilities;
 import constant.Constant;
 
 public class RegisterPage extends GeneralPage {
@@ -31,7 +31,7 @@ public class RegisterPage extends GeneralPage {
 		ElementHelper.enterText(Constant.UserInfo.PID, txtPID);
 		ElementHelper.clickElement(btnRegister);
 		if(active) {
-			Utilities.openActiveEmailLink(email);
+			EmailUtilities.openActiveEmailLink(email);
 		}
 	}
 	
