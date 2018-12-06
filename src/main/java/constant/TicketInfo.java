@@ -17,7 +17,7 @@ public class TicketInfo {
 		this.seatType = seatType;
 		this.amount = amount;
 	}
-	
+
 	public Date getDepartDate() {
 		return departDate;
 	}

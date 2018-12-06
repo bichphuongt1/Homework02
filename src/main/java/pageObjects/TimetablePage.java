@@ -2,13 +2,13 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 
-import constant.Constant;
+import common.ElementHelper;
 
 public class TimetablePage extends GeneralPage {
 	
-	public static String lnkBookTicket = "//td[text()='%s']/following-sibling::td[text()='%s']/..//a[contains(@href, 'Book')]";
+	public static String lnkBookTicket = "//td[normalize-space()='%s']/following-sibling::td[normalize-space()='%s']/..//a[contains(@href, 'Book')]";
 
 	public void goToBookTicket(String departStation, String arriveStation) {	
-		Constant.WEBDRIVER.findElement(By.xpath(String.format(lnkBookTicket, departStation, arriveStation))).click();
+		ElementHelper.clickElement(By.xpath(String.format(lnkBookTicket, departStation, arriveStation)));
 	}
 }

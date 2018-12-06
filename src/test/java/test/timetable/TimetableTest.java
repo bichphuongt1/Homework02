@@ -36,4 +36,5 @@ public class TimetableTest extends TestBase {
 		softAssert.assertEquals(bookTicketPage.getArriveStationSelectedOption(), arriveStation);
 		softAssert.assertAll();
 	}
+	
 }

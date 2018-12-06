@@ -36,7 +36,6 @@ public class ForgotPasswordTest extends TestBase {
 		softAssert.assertEquals(resetPasswordPage.getPasswordChangeFormName(), Constant.FormName.PASSWORD_CHANGE_FORM);
 		resetPasswordPage.resetPasswordWithoutToken();
 		softAssert.assertEquals(resetPasswordPage.getResetPasswordErrorMessage(), Constant.Message.RESET_PASSWORD_TOKEN_ERROR_MSG);
-		// Remaining case: Verify Reset token is invalid.
 		softAssert.assertAll();
 	}
 	

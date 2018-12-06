@@ -37,11 +37,11 @@ public class Utilities {
 	    return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
 	
-	public static Date plusDays(int plusDays) {
+	public static Date currentDatePlusDays(int numberDay) {
 		Date date = new Date();
 		Calendar calendar = Calendar.getInstance(); 
-		calendar.setTime(date); 
-		calendar.add(Calendar.DATE, plusDays);
+		calendar.setTime(date);
+		calendar.add(Calendar.DATE, numberDay);
 		date = calendar.getTime();
 		return date;
 	}
@@ -56,8 +56,8 @@ public class Utilities {
 	    alert.accept();
 	}
 	
-	public static int numberOfRowsInTable(By by) {
-		List<WebElement> rows = Constant.WEBDRIVER.findElements(by);
+	public static int numberOfRowsInTable(By locator) {
+		List<WebElement> rows = Constant.WEBDRIVER.findElements(locator);
 		return rows.size();
 	}
 }

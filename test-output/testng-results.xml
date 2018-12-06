@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4935" started-at="2018-12-06T13:34:44Z" finished-at="2018-12-06T13:34:49Z">
+  <suite name="Default suite" duration-ms="5359" started-at="2018-12-06T16:52:33Z" finished-at="2018-12-06T16:52:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4935" started-at="2018-12-06T13:34:44Z" finished-at="2018-12-06T13:34:49Z">
-      <class name="test.password.ChangePasswordTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.password.ChangePasswordTest@42e26948]" name="beforeClass" is-config="true" duration-ms="3723" started-at="2018-12-06T13:34:44Z" finished-at="2018-12-06T13:34:48Z">
+    <test name="Default test" duration-ms="5359" started-at="2018-12-06T16:52:33Z" finished-at="2018-12-06T16:52:39Z">
+      <class name="test.myticket.MyTicketTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.myticket.MyTicketTest@548e7350]" name="beforeClass" is-config="true" duration-ms="3713" started-at="2018-12-06T16:52:33Z" finished-at="2018-12-06T16:52:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.password.ChangePasswordTest@42e26948]" name="beforeMethod" is-config="true" duration-ms="127" started-at="2018-12-06T13:34:48Z" finished-at="2018-12-06T13:34:48Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.myticket.MyTicketTest@548e7350]" name="beforeMethod" is-config="true" duration-ms="133" started-at="2018-12-06T16:52:37Z" finished-at="2018-12-06T16:52:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC09()[pri:0, instance:test.password.ChangePasswordTest@42e26948]" name="TC09" duration-ms="1071" started-at="2018-12-06T13:34:48Z" description="TC09 - User can change password." finished-at="2018-12-06T13:34:49Z">
+        <test-method status="PASS" signature="TC16()[pri:0, instance:test.myticket.MyTicketTest@548e7350]" name="TC16" duration-ms="1499" started-at="2018-12-06T16:52:37Z" description="TC16 - User can cancel a ticket." finished-at="2018-12-06T16:52:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC09 -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.password.ChangePasswordTest@42e26948]" name="afterClass" is-config="true" duration-ms="1" started-at="2018-12-06T13:34:49Z" finished-at="2018-12-06T13:34:49Z">
+        </test-method> <!-- TC16 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.myticket.MyTicketTest@548e7350]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-12-06T16:52:39Z" finished-at="2018-12-06T16:52:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- test.password.ChangePasswordTest -->
+      </class> <!-- test.myticket.MyTicketTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

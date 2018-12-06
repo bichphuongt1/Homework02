@@ -23,34 +23,28 @@ public class BookTicketPage extends GeneralPage {
 	public static By tableSeatType = By.xpath("//table[@class='MyTable']//tr[2]/td[3]");
 	public static By tableAmount = By.xpath("//table[@class='MyTable']//tr[2]/td[7]");
 			
-			
 	public void selectDepartDate(String departDateName) {
-		WebElement element = Constant.WEBDRIVER.findElement(departDate);
-		Select dropdown = new Select(element);
+		Select dropdown = new Select(Constant.WEBDRIVER.findElement(departDate));
 		dropdown.selectByVisibleText(departDateName);
 	}
 	
 	public void selectDepartStation(String departStationName) {
-		WebElement element = Constant.WEBDRIVER.findElement(departStation);
-		Select dropdown = new Select(element);
+		Select dropdown = new Select(Constant.WEBDRIVER.findElement(departStation));
 		dropdown.selectByVisibleText(departStationName);
 	}
 	
 	public void selectArriveStation(String arriveStationName) {
-		WebElement element = Constant.WEBDRIVER.findElement(arriveStation);
-		Select dropdown = new Select(element);
+		Select dropdown = new Select(Constant.WEBDRIVER.findElement(arriveStation));
 		dropdown.selectByVisibleText(arriveStationName);
 	}
 	
 	public void selectSeatType(String seatTypeName) {
-		WebElement element = Constant.WEBDRIVER.findElement(seatType);
-		Select dropdown = new Select(element);
+		Select dropdown = new Select(Constant.WEBDRIVER.findElement(seatType));
 		dropdown.selectByVisibleText(seatTypeName);
 	}
 	
 	public void selectTicketAmount(int amount) {
-		WebElement element = Constant.WEBDRIVER.findElement(ticketAmount);
-		Select dropdown = new Select(element);
+		Select dropdown = new Select(Constant.WEBDRIVER.findElement(ticketAmount));
 		dropdown.selectByVisibleText(String.valueOf(amount));
 	}
 	
@@ -60,38 +54,40 @@ public class BookTicketPage extends GeneralPage {
 		selectArriveStation(ticketInfo.getArriveStation());
 		selectSeatType(ticketInfo.getSeatType());
 		selectTicketAmount(ticketInfo.getAmount());
-		Constant.WEBDRIVER.findElement(btnBookTicket).click();
+		ElementHelper.clickElement(btnBookTicket);
 	}
 	
 	public String getBookTicketSuccessMessage() {
 		return Constant.WEBDRIVER.findElement(lblPageName).getText();
 	}
 	
-	public String getDepartStation() {
+	public String getTableDepartStation() {
 		return ElementHelper.getTextElement(tableDepartStation);
 	}
 	
-	public String getArriveStation() {
+	public String getTableArriveStation() {
 		return ElementHelper.getTextElement(tableArriveStation);
 	}
 	
-	public String getSeatType() {
+	public String getTableSeatType() {
 		return ElementHelper.getTextElement(tableSeatType);
 	}
 	
-	public String getAmount() {
+	public String getTableAmount() {
 		return ElementHelper.getTextElement(tableAmount);
 	}
 	
-	public String getDepartStationSelectedOption() {
-		Select select = new Select(Constant.WEBDRIVER.findElement(departStation));
-		WebElement option = select.getFirstSelectedOption();
-		return option.getText();
+	public String getSelectedOptionText(By locator) {
+		Select select = new Select(Constant.WEBDRIVER.findElement(locator));
+		WebElement selectedOption = select.getFirstSelectedOption();
+		return selectedOption.getText();
+	}
+	
+	public String getDepartStationSelectedOption() {	
+		return getSelectedOptionText(departStation);
 	}
 	
 	public String getArriveStationSelectedOption() {
-		Select select = new Select(Constant.WEBDRIVER.findElement(arriveStation));
-		WebElement option = select.getFirstSelectedOption();
-		return option.getText();
+		return getSelectedOptionText(arriveStation);
 	}
 }
