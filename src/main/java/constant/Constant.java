@@ -6,9 +6,8 @@ public class Constant {
 
 	public static WebDriver WEBDRIVER;
 	public static WebDriver WEBDRIVER_FAKE;
-//	public static final String RAILWAY_URL = "https://dbdeec00.ngrok.io";
 	public static final String RAILWAY_URL = "http://localhost:8888";
-	public static final String EMAIL_INBOX_URL = "https://mailinator.com/v3/index.jsp?zone=public&query=%s#/#inboxpane";
+	public static final String MAILINATOR_URL = "https://mailinator.com";
 	
 	public static final int LIMITTED_LOGIN_TIMES = 4;
 	public static final int LOGIN_ONE_TIME = 1;

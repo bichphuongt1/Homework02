@@ -28,7 +28,7 @@ public class BookTicketTest extends TestBase {
 		
 		homePage.gotoPage(TabMenu.LOGIN);
 		
-		loginPage.login(Constant.UserInfo.USERNAME, Constant.UserInfo.PASSWORD, 1);
+		loginPage.login(Constant.UserInfo.USERNAME, Constant.UserInfo.PASSWORD, Constant.LOGIN_ONE_TIME);
 		homePage.gotoPage(TabMenu.BOOK_TICKET);
 		bookTicketPage.bookTicket(ticketInfo);
 		softAssert.assertEquals(bookTicketPage.getBookTicketSuccessMessage(), Constant.Message.BOOK_TICKET_SUCCESS_MSG);

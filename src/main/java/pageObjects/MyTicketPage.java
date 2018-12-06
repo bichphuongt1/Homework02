@@ -1,7 +1,5 @@
 package pageObjects;
 
-import java.util.NoSuchElementException;
-
 import org.openqa.selenium.By;
 
 import common.Utilities;

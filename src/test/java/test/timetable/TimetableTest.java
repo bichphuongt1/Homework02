@@ -25,7 +25,7 @@ public class TimetableTest extends TestBase {
 		
 		homePage.gotoPage(TabMenu.LOGIN);
 		
-		loginPage.login(Constant.UserInfo.USERNAME, Constant.UserInfo.PASSWORD, 1);
+		loginPage.login(Constant.UserInfo.USERNAME, Constant.UserInfo.PASSWORD, Constant.LOGIN_ONE_TIME);
 		homePage.gotoPage(TabMenu.TIMETABLE);
 		
 		String departStation = DepartStation.HUE.getValue();

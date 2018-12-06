@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import common.ElementHelper;
-import common.Utilities;
+import common.EmailUtilities;
 import constant.Constant;
 import constant.TabMenu;
 import pageObjects.HomePage;
@@ -78,7 +78,7 @@ public class LoginTest extends TestBase {
 	public void TC08() {
 		homePage.gotoPage(TabMenu.REGISTER);
 		RegisterPage registerPage = new RegisterPage();
-		String email = Utilities.generateEmail();
+		String email = EmailUtilities.generateEmail();
 		registerPage.register(email, Constant.UserInfo.PASSWORD, Constant.UserInfo.PASSWORD, Constant.NO_ACTIVE);
 		registerPage.gotoPage(TabMenu.LOGIN);
 		loginPage.login(email, Constant.UserInfo.PASSWORD, Constant.LOGIN_ONE_TIME);
