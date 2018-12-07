@@ -23,6 +23,6 @@ public class TestBase {
 
 	@AfterClass
 	public void afterClass() {
-		Constant.WEBDRIVER.quit();
+	//	Constant.WEBDRIVER.quit();
 	}
 }

@@ -8,7 +8,7 @@
           <include name="beforeMethod"/>
           <include name="beforeClass"/>
           <include name="afterClass"/>
-          <include name="TC16"/>
+          <include name="FFTC02"/>
         </methods>
       </class> <!-- test.myticket.MyTicketTest -->
     </classes>

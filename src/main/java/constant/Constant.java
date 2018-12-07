@@ -36,6 +36,7 @@ public class Constant {
 	// Format date
 	public class FormatDate {
 		public static final String FORMAT_STYLE = "MM/d/yyyy";
+		public static final String FORMAT_STYLE_WRONG = "dd/MM/yyyy";
 	}
 	
 	// Error Message
@@ -70,6 +71,10 @@ public class Constant {
 		public static final String CHANGE_PASSWORD = "Change password";
 		public static final String REGISTER = "";
 		public static final String BOOK_TICKET = "Book ticket";
+	}
+	
+	public class ApplyFilter {
+		public static final String ERROR_MESSAGE = "The date format is wrong, date filter is ignored. Example of a proper date: Today is <mm/dd/yyy>";
 	}
 	
 }

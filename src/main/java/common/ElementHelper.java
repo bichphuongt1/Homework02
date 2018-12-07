@@ -38,4 +38,11 @@ public class ElementHelper {
 		}
 	}
 	
+	public static boolean isElementDisplayed(By locator) {
+		try	{
+			return Constant.WEBDRIVER.findElement(locator).isDisplayed();
+		} catch(Exception NoSuchElementException) {
+			return false;
+		}
+	}
 }

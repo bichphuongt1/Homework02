@@ -6,7 +6,11 @@ import org.openqa.selenium.support.ui.Select;
 
 import common.ElementHelper;
 import common.Utilities;
+import constant.ArriveStation;
 import constant.Constant;
+import constant.DepartStation;
+import constant.SeatType;
+import constant.TabMenu;
 import constant.Constant.FormatDate;
 import constant.TicketInfo;
 
@@ -49,10 +53,15 @@ public class BookTicketPage extends GeneralPage {
 	}
 	
 	public void bookTicket(TicketInfo ticketInfo) {
+		Utilities.waitForElement(departDate);
 		selectDepartDate(Utilities.dateToStringWithFormat(ticketInfo.getDepartDate(), FormatDate.FORMAT_STYLE));
+		Utilities.waitForElement(departStation);
 		selectDepartStation(ticketInfo.getDepartStation());
+		Utilities.waitForElement(arriveStation);
 		selectArriveStation(ticketInfo.getArriveStation());
+		Utilities.waitForElement(seatType);
 		selectSeatType(ticketInfo.getSeatType());
+		Utilities.waitForElement(ticketAmount);
 		selectTicketAmount(ticketInfo.getAmount());
 		ElementHelper.clickElement(btnBookTicket);
 	}
@@ -90,4 +99,18 @@ public class BookTicketPage extends GeneralPage {
 	public String getArriveStationSelectedOption() {
 		return getSelectedOptionText(arriveStation);
 	}
+	
+	public void bookTickets(TicketInfo ticketInfo, int amount) {		
+		if (amount <= DepartStation.values().length) {
+			for (int i = 0; i < amount; i++) {
+				TicketInfo newTicketInfo = new TicketInfo(ticketInfo.getDepartDate(), DepartStation.values()[i].getValue(), ticketInfo.getArriveStation(), ticketInfo.getSeatType(), ticketInfo.getAmount());
+				if (newTicketInfo.getDepartStation().equals(newTicketInfo.getArriveStation())) {
+					newTicketInfo.setArriveStation(ArriveStation.SAI_GON.getValue());
+				}
+				bookTicket(newTicketInfo);
+				gotoPage(TabMenu.BOOK_TICKET);
+			}
+		}
+	}
+	
 }
